@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import welcomeClass from "./welcomeClass";
+import WelcomeClass from "./welcomeClass";
 import './App.css';
 
 
@@ -11,7 +11,7 @@ class App extends Component {
         <header className="App-header">
           <h1>GELBER</h1>
         </header>
-        <welcomeClass name={"Herr Meier!"}></welcomeClass>
+        <WelcomeClass name={"Herr Meier!"} />
       </div>
     );
   }
