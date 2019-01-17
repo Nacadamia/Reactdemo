@@ -9,9 +9,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>GELBER</h1>
+            <WelcomeClass name={"Hoang"} />
         </header>
-        <WelcomeClass name={"Herr Meier!"} />
+
       </div>
     );
   }

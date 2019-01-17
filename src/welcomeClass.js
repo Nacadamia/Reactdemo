@@ -8,11 +8,29 @@ class WelcomeClass extends Component {
         }
     }
 
+    componentWillMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+    tick() {
+        this.setState({
+            date: new Date()
+        });
+    }
     render() {
         return (
             <div>
             <h1> Welcome, {this.props.name} </h1>
-            <h2> Heute ist {this.state.date.toLocaleString()} </h2>
+            <h2> Heute ist der {this.state.date
+                                .toLocaleString('de-de', {day:'numeric', month: 'long', year:'numeric'})}
+                                {this.state.date.toLocaleTimeString()} Uhr! </h2>
             </div>
         ) }
 
